@@ -1,0 +1,626 @@
+@import 'variables';
+
+html{
+    box-sizing: border-box;
+}
+
+html,body{
+    margin: 0;
+    padding: 0;
+    min-height: 100% ;/* Ensure the body takes at least the full height of the viewport */
+   position: relative; /* Needed for the footer positioning */
+    padding-top: 90px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: $body-font-size;
+    color: $default-text-color;
+  }
+
+.main-container{
+    width: 100vw;
+    padding: 0px 20px;
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: $body-font-size;
+    color: $default-text-color;
+}
+
+span{
+    color: $logo-color;
+    font-weight: bolder;
+}
+a{
+    text-decoration: none;
+    color: $header-text-color;
+    margin: 0px;
+    padding: 0px;
+}
+.nav{
+    display: flex;
+    background-color: white;
+    color: #ffffff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Ensure the navbar is on top of other content */
+    padding: 30px 0px;
+  }
+
+.nav-pointer{
+    display: inline-block;
+    position: relative;
+    color: $logo-color;
+    font-weight: bolder;
+}
+
+.nav-pointer::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%; /* Adjust this value to control the length of the underline */
+    height: 2px; /* Adjust this value to control the thickness of the underline */
+    background-image: linear-gradient(to right, $logo-color, $logo-color 50%, transparent 80%);
+
+}
+
+.nav-hover{
+    color: $header-text-color;
+}
+
+.nav-hover:hover{
+    color: $nav-hover-color;
+}
+
+
+.brand{
+    display: flex;
+    gap: 7px;
+    padding: 0px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 37px;
+    width: 37px;
+    background-color: $logo-color;
+    border-radius: 50%;
+    color: $logo-text-color;
+    font-size: $header-font-size;
+    font-weight: bold;
+}
+
+.name{
+    font-size: $header-font-size;
+    font-weight: bolder;
+    color: $header-text-color;
+    margin: 0px;
+}
+
+.nav-items{
+    width: fit-content;
+    display: flex;
+}
+
+.btn-primary{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: fit-content;
+    padding: 7px 15px;
+    background: $logo-color;
+    color: $logo-text-color;
+    border-radius: 8px;
+}
+
+.btn-primary:hover{
+    background: $button-hover-color;
+    box-shadow: 0px 10px 13px -5px #c0c0c0, 5px 5px 15px 5px rgba(85, 85, 85, 0);
+}
+
+.btn-secondary{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: fit-content;
+    padding: 14px 12px;
+    background: $logo-text-color;
+    color: $logo-color;
+    border: 1px solid $logo-color;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.btn-secondary:hover{
+    background: $logo-color;
+    color: $logo-text-color;
+    border-radius: 8px;
+}
+
+.btn{
+    display: flex;
+    align-self: center;
+}
+
+.profile{
+    padding-bottom: 150px;
+}
+.profile-content{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .profile-header{
+    font-size: $big-font-size;
+    color: $header-text-color;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.profile-text{
+    width: 90%;
+}
+
+.portfolio-area{
+        
+    height: fit-content;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 200px;
+}
+.grid-container{
+    justify-content: center;
+    margin-bottom: 30%;
+}
+.grid-item{
+    display: flex;
+    flex-direction: column;
+    height: 23rem;
+    width: 18rem;
+    border: 1px solid $card-border-color;
+    border-radius: 8px;
+    gap: 30px;
+}
+
+.grid-img{
+    height: 50%;
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 10px;
+}
+.card-title{
+    font-size: $card-title-font-size;
+    font-weight: bold;
+    color: $header-text-color;
+}
+.card-text{
+    width: 15rem;
+    margin: 0px;
+}
+.portfolio-header-container{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+// ######################################
+// ABOUT PAGE
+// ################################################
+h1,h2{
+    margin: 0px;
+    padding: 0px;
+    text-transform: capitalize;
+    letter-spacing: 3px;
+    color: $header-text-color;
+}
+
+
+.img-about{
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    
+}
+
+.big-title{
+    width: fit-content;
+    font-weight: bolder;
+    font-size: 55px;
+    
+}
+.subtitle{
+    width: fit-content;
+    font-weight: bold;
+    font-size: 23px;
+}
+.about-holder{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 30px;
+}
+.txt-about{
+    width: 500px;
+    margin: 0px;
+}
+
+.btn-about-holder{
+    height: fit-content;
+    display: flex;
+    gap: 20px;
+}
+.btn-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-about:hover{
+    background: white;
+    border: 1px solid $logo-color;
+    color: $logo-color;
+    font-weight: bold;
+}
+
+.btn1{
+    background: $logo-color;
+}
+
+.btn2{
+    background: #1B2430;
+}
+
+.btn3{
+    background: #FFB562;
+    color: $header-text-color;
+}
+
+
+// ######################################
+// CONTACT PAGE
+// ################################################
+.contact-section{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding-bottom: 500px;
+}
+.contact-grid{
+    width: 100%;
+    display: grid;
+    font-size: $body-font-size;
+}
+
+.contact-header{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.txt-header{
+    width: 60%;
+    text-align: center;
+}
+.contact-info{
+    height: 100%;
+    background: $logo-color;
+    color: rgb(212, 212, 212);
+    border-radius: 8px 8px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 0px;
+
+    .contact-info-header{
+        font-size: $header-font-size;
+        font-weight: bold;
+        color: white;
+        width: fit-content;
+    }
+    
+    
+    .contact-header p{
+        width: 70%;
+    }
+    .contact-details-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+    .contact-details{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .contact-details a{
+        color: $card-text-color;
+    }
+    .social-media{
+        width: min-content;
+        align-self: center;
+    }
+}
+
+
+.txt-form-placeholder{
+    color: rgb(224, 224, 224);
+}
+
+.form{
+    height: fit-content;
+    padding: 20px;
+}
+
+.textfield-hover:hover{
+    border: 1px solid $logo-color;
+}
+
+// ######################################
+// FOOTER PAGE
+// ################################################
+.footer{
+         position: absolute;
+        height: fit-content;
+         width:100%;
+        bottom: 0;
+        background: $logo-color;
+        color: white;
+        .row{
+            width: 70%;
+            margin: 0 auto;
+        }
+        .footer-cp{
+            width: 70%;
+            margin: 0 auto;
+        }
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+}
+
+.txt-footer{
+    font-size: $card-text-font-size;
+    color: $card-text-color;
+}
+// ################# SMALL SCREEN ###################################################
+@media (max-width:1199px) {
+.not-small-screen{
+        display: none;
+    }
+    .main-container{
+        flex-grow: 1;
+        background-color: bisque;
+        gap: 90px;
+    }
+
+   .nav{
+    align-items: center;
+    flex-direction: column;
+   }
+   .nav-frame{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+   }
+   .brand{
+    width: fit-content;
+    align-items: center;
+    justify-content: flex-start;
+}
+   .nav-items{
+    width: fit-content;
+    gap: 30px;
+    justify-content: space-between;
+   }
+   .profile{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.profile-content{
+    gap: 7px;
+ }
+ .portfolio-area{
+    width: 90%;
+    margin: 0 auto;
+    flex-grow: 1;
+    gap: 20px;
+    padding-bottom: 500px;
+ }
+ 
+ .portfolio-header-container{
+    width: 70%;
+    text-align: start;
+}
+
+.grid-container{
+    flex-grow: 1;
+}
+// ######################################
+// ABOUT PAGE
+// ################################################
+.about-section{
+    margin:0 auto; /* center, not in IE5 */
+    height:auto !important; /* real browsers */
+    min-height:100%; /* IE6: treaded as min-height*/
+    height:100%; /* real browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 700px;
+}
+.title-holder{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.about-holder{
+    width: fit-content;
+    align-items: center;
+}
+
+.txt-side{
+    width: 95%;
+}
+.txt-about{
+    width: 100%;
+}
+
+// ######################################
+// CONTACT PAGE
+// ################################################
+.contact-section{
+    width: 85%;
+    padding-bottom: 650px;
+}
+.contact-grid{
+    width: 100%;
+    grid-template-rows: auto;
+}
+
+.txt-header{
+    width: 80%;
+
+}
+
+}
+
+
+// ################# BIG SCREEN ##########
+@media (min-width:1200px) {
+.not-big-screen{
+        display: none;
+    }
+    .main-container{
+        gap: 130px;
+        }
+        .contact-container{
+            height: fit-content;
+            gap: 50px;
+            }    
+
+    .nav-frame{
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+       }
+
+    .nav-items{
+        height: 100%;
+        align-items: center;
+        gap: 70px;
+    }
+
+    .profile{
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    .profile-text{
+        width: 75%;
+    }
+    .profile-img{
+        height: 100%;
+        max-width: 70%;
+    }
+
+     .about-section{
+
+        height:auto !important; /* real browsers */
+        min-height:100%; /* IE6: treaded as min-height*/
+
+        height:100%; /* real browsers */
+        padding-bottom: 500px;
+
+        display: flex;
+        gap: 100px;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    
+     // ######################################
+// CONTACT PAGE
+// ################################################
+.contact-grid{
+    grid-template-columns: 1fr 2fr;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.contact-info{
+    border-radius: 8px 0px 0px 8px;
+}
+
+
+.footer-shortpage{
+    position: fixed;
+    bottom: 0;
+}
+
+
+}
+
+@media (min-width:2000px) and (min-height:1000px) {
+    .profile-text{
+        width: 45%;
+    }
+    
+    .profile{
+        padding-bottom: 250px;
+    }
+    .about-section{
+        padding-bottom: 780px;
+    }
+     .portfolio-area{
+        padding-bottom:0px
+      }
+}
+
+@media (min-width:853px) and (max-width:1199px) {
+    .portfolio-area{
+        padding-bottom: 200px;
+    }
+}
+    @media (min-width:600px) and (max-width:852px) {
+        .portfolio-area{
+            padding-bottom: 400px;
+        }
+}
