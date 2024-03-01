@@ -121,6 +121,7 @@
                   class="form-control textfield-hover"
                   id="validationCustom01"
                   placeholder="Munster"
+                  onkeyup="this.value=this.value.replace(/[^A-zÄ-ü\s]/g,'');"
                   required
                 />
                 <div class="valid-feedback">Looks good!</div>
@@ -135,6 +136,7 @@
                   class="form-control textfield-hover"
                   id="validationCustom02"
                   placeholder="Munster"
+                  onkeyup="this.value=this.value.replace(/[^A-zÄ-ü]/g,'');"
                   required
                 />
                 <div class="valid-feedback">Looks good!</div>
@@ -161,6 +163,7 @@
                   class="form-control textfield-hover"
                   id="exampleFormControlInput2"
                   placeholder="+49 1000 101 011"
+                  onkeyup="this.value=this.value.replace(/[^+0-9]/g,'');"
                 />
               </div>
 
