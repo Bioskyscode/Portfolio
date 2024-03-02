@@ -513,6 +513,15 @@ ul{
     grid-template-rows: auto;
 }
 
+.contact-info{
+    gap: 10px;
+    .contact-details{
+        gap: 15px;
+    }
+    .contact-details-wrapper{
+        gap: 30px;
+    }
+}
 .txt-header{
     width: 80%;
 
@@ -569,7 +578,7 @@ ul{
         min-height:100%; /* IE6: treaded as min-height*/
 
         height:100%; /* real browsers */
-        padding-bottom: 500px;
+        padding-bottom: 830px;
 
         display: flex;
         gap: 100px;
@@ -607,7 +616,7 @@ ul{
         padding-bottom: 250px;
     }
     .about-section{
-        padding-bottom: 780px;
+        padding-bottom: 850px;
     }
      .portfolio-area{
         padding-bottom:0px
