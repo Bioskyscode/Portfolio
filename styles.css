@@ -658,6 +658,10 @@ ul {
     margin: 0 auto;
     padding-bottom: 700px;
   }
+  .about-section .img-about {
+    height: 200px;
+    width: 200px;
+  }
   .title-holder {
     display: -webkit-box;
     display: -ms-flexbox;
